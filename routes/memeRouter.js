@@ -5,7 +5,7 @@ var router = express.Router()
 memeManager.init()
 
 router.all('/random', async function(req, res, next) {
-    res.send(memeManager.getMeme())
+    res.sendFile(memeManager.getMeme())
 })
 
 router.all('/all', async function(req, res, next) {
