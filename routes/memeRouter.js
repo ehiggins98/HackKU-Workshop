@@ -7,8 +7,6 @@ const memeManager = require('../memeManager')
 // Used for routing requests in Express
 var router = express.Router()
 
-memeManager.init()
-
 // Gets a random meme image from the database
 router.all('/random', async function(req, res, next) {
     res.sendFile(memeManager.getMeme())

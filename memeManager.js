@@ -1,8 +1,5 @@
 /* Fetches a random meme from the images folder */
 
-// Library for reading files
-const fs = require('fs')
-
 const memeCount = 15
 
 module.exports = {
