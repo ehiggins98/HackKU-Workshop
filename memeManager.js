@@ -4,7 +4,7 @@ const fs = require('fs')
 const text = fs.readFileSync('auth.json')
 const client = new Client(JSON.parse(text))
 
-const memeCount = 7
+const memeCount = 15
 
 module.exports = {
 	init: async () => {
