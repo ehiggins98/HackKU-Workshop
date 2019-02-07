@@ -1,20 +1,22 @@
+// Note the "var" keyword: unlike C++, we use it to declare all variables, instead of specifying a type
 var createError = require('http-errors')
+// Express is a simple HTTP server framework for Node.js
 var express = require('express')
-var path = require('path')
-var cookieParser = require('cookie-parser')
-var logger = require('morgan')
 
+// This module handles all requests for memes
 var memeRouter = require('./routes/memeRouter')
+
+// This module handles all requests for fonts
 var fontRouter = require('./routes/fontRouter')
 
 var app = express()
 
-app.use(logger('dev'))
 app.use(express.json())
-app.use(express.urlencoded({ extended: false }))
-app.use(cookieParser())
 
+// All requests of the format /meme/* (where * means any characters of any length) are forwarded to the memeRouter.
 app.use('/meme', memeRouter)
+
+// All requests of the format /font/* (where * means any characters of any length) are forwarded to the fontRouter.
 app.use('/fonts', fontRouter)
 
 // catch 404 and forward to error handler

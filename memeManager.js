@@ -1,8 +1,7 @@
-const { Client } = require('pg')
-const fs = require('fs')
+/* Fetches a random meme from the images folder */
 
-const text = fs.readFileSync('auth.json')
-const client = new Client(JSON.parse(text))
+// Library for reading files
+const fs = require('fs')
 
 const memeCount = 15
 
