@@ -1,19 +1,21 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+var createError = require('http-errors')
+var express = require('express')
+var path = require('path')
+var cookieParser = require('cookie-parser')
+var logger = require('morgan')
 
-var memeRouter = require('./routes/memeRouter');
+var memeRouter = require('./routes/memeRouter')
+var fontRouter = require('./routes/fontRouter')
 
-var app = express();
+var app = express()
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(logger('dev'))
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
+app.use(cookieParser())
 
-app.use('/meme', memeRouter);
+app.use('/meme', memeRouter)
+app.use('/fonts', fontRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
