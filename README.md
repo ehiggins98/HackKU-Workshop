@@ -1,5 +1,7 @@
-# HackKU Memer
-This repository is a simple web server with three endpoints - one to get a random meme from `images/`, and another two to get and post new meme creations.
+# HackKU Meme Maker
+This repository is a simple web server with five endpoints - one to get a random meme from `images/`, two to get and post new meme creations, and another two to get the Impact font for use in creating memes.
+
+The `master` branch contains a basic version of the app, without the ability to store and retrieve memes. The `extension` branch then has all the features of the basic version, with the ability to save and retrieve memes. If you want to use the extended version, you'll need to follow those installation instructions (in addition to the basic instructions) below.
 
 **If you want to modify the server you'll need to install it. Otherwise, the server is hosted on Heroku at [https://fathomless-mountain-33480.herokuapp.com/](https://fathomless-mountain-33480.herokuapp.com/).**
 
@@ -44,6 +46,8 @@ The server provides three endpoints: one with the "basic" version and two more i
         "meme_id": meme number (from its name in images/. Ex. 1.jpg is meme 1)
     }
     ```
+* GET /fonts/impact: gets the .ttf file for the Impact font
+* GET /fonts/css/impact: gets the .css file used for importing the Impact font into the website.
 
 ## (Optional) Extended Installation
 In addition to the above installation instructions, if you want to run the `extension` branch there are a couple more things you need to do. 
