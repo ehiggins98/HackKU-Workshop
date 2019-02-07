@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Impact'), local('Impact-Regular'), url('https://fathomless-mountain-33480.herokuapp.com/font/impact') format('ttf');
+}
